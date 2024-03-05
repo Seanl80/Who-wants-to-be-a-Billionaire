@@ -14,7 +14,7 @@
     width: 100vw;
 }
 
-h1 {
+h1, h2 {
     position: relative;
     text-align: center;
     top: 50%;
@@ -23,6 +23,42 @@ h1 {
     font-weight: 700;
     font-style: normal;
     text-shadow: 2px 2px 50px whitesmoke;
+}
+
+.start {
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+}
+
+#start-box {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#start-btn {
+    background-color: gold;
+    width: 100px;
+    color: #000000;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bolder;
+    padding: 2px 5px;
+    font-weight: 500;
+    top: 50%;
+    left: 50%;
+}
+
+#start-btn:hover {
+    background-color: #f8ec01;
+    width: 120px;
+    transition: .5s;
+    cursor: pointer;
+    text-align: center;
 }
 
 #main-body {
