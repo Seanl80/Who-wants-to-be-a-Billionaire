@@ -10,41 +10,43 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
-    <title>Who wants to be a zillionaire</title>
+    <title>Who wants to be a Billionaire</title>
 </head>
 <header>
     <nav></nav>
 </header>
 <body>
+     <!-- intro -->
     <div class='intro'>
-        <h1>Who wants to be a Zillionaire!</h1>
+        <h1>Who wants to be a Billionaire!</h1>
     </div>
+    <!-- start screen -->
     <section class="start">
         <div id="start-box">
-            <h2>Are You Ready?</h2>
-            <button id="start-btn" onclick="startQuiz()">Continue</button>
+            <h2>Ready To Begin?</h2>
+            <button class="start-btn btn btn-dark btn-lg btn-block" onclick="startQuiz()">Continue</button>
         </div>
     </section>
+    <!-- game section -->
     <section id="main-body">
-        <div id="game-box">
-            <h2 id="question">What is the answer to this question?</h2>
-            <div id="choice-container">
-                <p id="choice-prefix">A</p>
-                <p id="choice-text">Choice 1</p>
+        <div id="game-box"></div>
+            <div id="game-text">
+                <h2 id="question">What is the answer to this question?</h2>
+                <div class="row">
+                    <div class="col-md-6 mb-2 text-center text-md-right">
+                      <button class="choice btn btn-primary btn-lg btn-block" id="A" onclick="checkAnswer('A')">Option A</button>
+                    </div>
+                    <div class="col-md-6 mb-2 text-center text-md-left">
+                      <button class="choice btn btn-primary btn-lg btn-block" id="B" onclick="checkAnswer('B')">Option B</button>
+                    </div>
+                    <div class="col-md-6 mb-2 text-center text-md-right">
+                      <button class="choice btn btn-primary btn-lg btn-block" id="C" onclick="checkAnswer('C')">Option C</button>
+                    </div>
+                    <div class="col-md-6 mb-2 text-center text-md-left">
+                      <button class="choice btn btn-primary btn-lg btn-block" id="D" onclick="checkAnswer('D')">Option D</button>
+                    </div>
+                </div>  
             </div>
-            <div id="choice-container">
-                <p id="choice-prefix">B</p>
-                <p id="choice-text">Choice 2</p>
-            </div>
-            <div id="choice-container">
-                <p id="choice-prefix">C</p>
-                <p id="choice-text">Choice 3</p>
-            </div>
-            <div id="choice-container">
-                <p id="choice-prefix">D</p>
-                <p id="choice-text">Choice 4</p>
-            </div>
-        </div>
     </section>
 
     <footer></footer>
