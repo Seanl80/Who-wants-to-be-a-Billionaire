@@ -22,9 +22,13 @@
     </div>
     <!-- start screen -->
     <section class="start">
+        <video id="background-video" autoplay muted loop>
+            <source src="assets/images/streamers.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
         <div id="start-box">
-            <h2>Ready To Begin?</h2>
-            <button class="start-btn btn btn-dark btn-lg btn-block" onclick="startQuiz()">Continue</button>
+            <h2>Answer all questions correctly to win the prize or you leave with nothing!</h2>
+            <button class="start-btn btn btn-dark btn-lg btn-block" onclick="startQuiz()">Ready?</button>
         </div>
     </section>
     <!-- game section -->
@@ -34,23 +38,24 @@
                 <h2 id="question">What is the answer to this question?</h2>
                 <div class="row">
                     <div class="col-md-6 mb-2 text-center text-md-right">
-                      <button class="choice btn btn-primary btn-lg btn-block" id="A" onclick="checkAnswer('A')">Option A</button>
+                      <button class="choice btn btn-dark btn-lg btn-block" id="A" onclick="checkAnswer('A')">Option A</button>
                     </div>
                     <div class="col-md-6 mb-2 text-center text-md-left">
-                      <button class="choice btn btn-primary btn-lg btn-block" id="B" onclick="checkAnswer('B')">Option B</button>
+                      <button class="choice btn btn-dark btn-lg btn-block" id="B" onclick="checkAnswer('B')">Option B</button>
                     </div>
                     <div class="col-md-6 mb-2 text-center text-md-right">
-                      <button class="choice btn btn-primary btn-lg btn-block" id="C" onclick="checkAnswer('C')">Option C</button>
+                      <button class="choice btn btn-dark btn-lg btn-block" id="C" onclick="checkAnswer('C')">Option C</button>
                     </div>
                     <div class="col-md-6 mb-2 text-center text-md-left">
-                      <button class="choice btn btn-primary btn-lg btn-block" id="D" onclick="checkAnswer('D')">Option D</button>
+                      <button class="choice btn btn-dark btn-lg btn-block" id="D" onclick="checkAnswer('D')">Option D</button>
                     </div>
+                </div>
+                <div id="money-count" class="money-count">
+                    £0
                 </div>  
             </div>
     </section>
-
     <footer></footer>
     <script src="assets/js/script.js"></script>
-    <script src="assets/js/questions.js"></script>
 </body>
 </html>
