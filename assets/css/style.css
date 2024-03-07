@@ -22,7 +22,7 @@ h1, h2 {
     font-family: "Poppins", sans-serif;
     font-weight: 700;
     font-style: normal;
-    text-shadow: 2px 2px 50px whitesmoke;
+    text-shadow: 2px 2px 100px orange;
 }
 
 .start {
@@ -40,25 +40,14 @@ h1, h2 {
     transform: translate(-50%, -50%);
 }
 
-#start-btn {
+.start-btn {
     background-color: gold;
-    width: 100px;
     color: #000000;
     border-radius: 50px;
     font-size: 18px;
     font-weight: bolder;
-    padding: 2px 5px;
     font-weight: 500;
-    top: 50%;
-    left: 50%;
-}
-
-#start-btn:hover {
-    background-color: #f8ec01;
-    width: 120px;
-    transition: .5s;
-    cursor: pointer;
-    text-align: center;
+    width: 150px;
 }
 
 #main-body {
@@ -78,10 +67,51 @@ h1, h2 {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80%;
-    min-height: 80vh;
+    min-height: 90vh;
     background: url('../images/game-design.jpg')no-repeat center center;
-    border-radius: 50%;
-    text-shadow: 2px 2px 5px black;
-    z-index: 10;
+    border-radius: 50px;
 }
-    
+
+#game-text {
+    position: relative;
+    display: block;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#question {
+    color: gold;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-shadow: 2px 2px black;
+}
+  
+.choice {
+    background-color: gold;
+    color: #000000;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bolder;
+    font-weight: 500;
+    width: 300px;
+}
+
+@media (max-width: 370px) {
+
+    .choice {
+        font-size: 16px;
+        width: 150px;
+    }
+}
+
+.align-right {
+    text-align: right;
+  }
+  
+  .align-left {
+    text-align: left;
+  }
+  
