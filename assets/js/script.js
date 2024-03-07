@@ -1,30 +1,25 @@
+// intro
+let introScreen = document.querySelector('.intro');
 let textElement = document.querySelector('.intro h1');
-textElement.style.setProperty('--animate-duration', '3s');
+textElement.style.setProperty('--animate-duration', '2s');
 let startScreen = document.querySelector('.start');
 let mainBodyElement = document.getElementById('main-body');
+let finishScreen = document.querySelector('.end')
 
-textElement.classList.add('animate__animated', 'animate__zoomInDown', 'animate__slower');
-
+textElement.classList.add('animate__animated', 'animate__zoomInDown', 'animate__slow');
+// load start screen
 textElement.addEventListener('animationend', () => {
   document.querySelector('.intro').style.display = 'none';
   startScreen.style.display = 'block';
 });
-
+// load quiz after button click
 function startQuiz() {
   startScreen.style.display = 'none';
   mainBodyElement.style.display = 'block';
   getQuestion();
 }
-
+// questions
 const questions = [
-  {
-      question: 'What is the capital of France?',
-      choiceA: 'London',
-      choiceB: 'Berlin',
-      choiceC: 'Paris',
-      choiceD: 'Amsterdam',
-      correct: 'C'
-  },
   {
       question: 'Who painted the Mona Lisa?',
       choiceA: 'Leonardo da Vinci',
@@ -50,35 +45,11 @@ const questions = [
       correct: 'D'
   },
   {
-      question: 'What is the square root of 64?',
-      choiceA: '4',
-      choiceB: '6',
-      choiceC: '10',
-      choiceD: '8',
-      correct: 'D'
-  },
-  {
       question: 'In which year did the Titanic sink?',
       choiceA: '1912',
       choiceB: '1907',
       choiceC: '1922',
       choiceD: '1933',
-      correct: 'A'
-  },
-  {
-      question: 'Who wrote the play "Romeo and Juliet"?',
-      choiceA: 'Jane Austen',
-      choiceB: 'Charles Dickens',
-      choiceC: 'William Shakespeare',
-      choiceD: 'Emily Brontë',
-      correct: 'C'
-  },
-  {
-      question: 'What is the tallest mammal in the world?',
-      choiceA: 'Giraffe',
-      choiceB: 'Elephant',
-      choiceC: 'Hippopotamus',
-      choiceD: 'Blue whale',
       correct: 'A'
   },
   {
@@ -88,15 +59,6 @@ const questions = [
       choiceC: 'English',
       choiceD: 'French',
       correct: 'B'
-  },
-  {
-      
-      question: 'What is the primary ingredient in guacamole?',
-      choiceA: 'Celery',
-      choiceB: 'Tomato',
-      choiceC: 'Onion',
-      choiceD: 'Avocado',
-      correct: 'D'
   },
   {
       question: 'Which country is the largest by land area?',
@@ -157,7 +119,11 @@ function getQuestion(){
   choiceC.innerHTML = q.choiceC;
   choiceD.innerHTML = q.choiceD;
 }
+// sounds
+const correctSound = new Audio('assets/audio/right-answer.mp3');
+const wrongSound = new Audio('assets/audio/wrong-answer.mp3');
 
+// check if answers right or wrong
 function checkAnswer(answer){
   let answerElement = document.getElementById(answer);
   if( answer === questions[runningQuestion].correct){
@@ -170,12 +136,18 @@ function checkAnswer(answer){
 function answerIsCorrect(answerElement){
   console.log("Answer is correct: ", answerElement);
   answerElement.style.backgroundColor = "green";
+  correctSound.play();
+  updateMoneyCount();
   setTimeout(loadNextQuestion, 1000);
 }
 
 function answerIsWrong(answerElement){
   console.log("Answer is wrong: ", answerElement);
   answerElement.style.backgroundColor = "red";
+  wrongSound.play();
+  setTimeout(function() {
+    window.location.href = "gameover.html";
+  }, 1000);
 }
 
 function loadNextQuestion() {
@@ -184,17 +156,37 @@ function loadNextQuestion() {
   document.getElementById('B').style.backgroundColor = '';
   document.getElementById('C').style.backgroundColor = '';
   document.getElementById('D').style.backgroundColor = '';
+  // move to next question
+  runningQuestion++; 
 
-  runningQuestion++; // Move to the next question
-  // Check if there are more questions
   if (runningQuestion <= lastQuestion) {
-    getQuestion(); // Load the next question
+    getQuestion();
   } else {
     console.log("End of quiz");
+    gameComplete();
   }
 }
 
+// money count
+let moneyCount = 0;
+
+function updateMoneyCount() {
+  if (moneyCount === 0) {
+      moneyCount = 1;
+  } else {
+      moneyCount *= 10;
+  }
+  document.getElementById("money-count").textContent = "Money Won £" + moneyCount;
+}
 
 
+// game completed
+function gameComplete() {
+  window.location.href = "finish.html";
+}
 
+// restart game
+function reset() {
+  window.location.href = "index.html";
+}
 
