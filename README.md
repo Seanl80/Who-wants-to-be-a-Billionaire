@@ -1,11 +1,15 @@
-# UX
+# Who wants to be a Billionaire
 
-## Project goals
+![Screenshots on defferent screen sizes](assets/images/screen-sizes.png)
 
- - This project will be designed to be useful, useable and valuable to the users.
- - Each part of the design process will have the users interaction in mind.
- - This will be developed to be used by teenagers all the way up to older people.
- - Ultimately it is designed to be accessable to those who wish to earn extra money.
+Who wants to be a Billionaire is an interactive quiz for children to grown ups where ten correct answers can win you a billion pounds. Its colourful, engaging structure will allow enjoyment and leave you wanting to play more.
+
+## Developer goals
+
+- I would like to build an engaging quiz for all ages.
+- I would like users to talk about the quiz with friends/family to gain more users.
+- I would like to build a colourful quiz to engage users.
+- I will try to not make the questions so hard it will put people off of playing it.
 
 ## User goals
 
@@ -13,13 +17,6 @@
 - This quiz should be easy to navigate without being confusing.
 - I would like user to find the quiz to be engaging right from the outset.
 - Users should feel they want to play again and again.
-
-### Developer goals
-
-- I would like to build an engaging quiz for all ages.
-- I would like users to talk about the quiz with friends/family to gain more users.
-- I would like to build a colourful quiz to engage users.
-- I will try to not make the questions so hard it will put people off of playing it.
 
 ### User stories
 
@@ -77,7 +74,6 @@ A winning ending animation.
 - For this website I have chosen to use HTML, CSS and JavaScript.
 - I have also included Bootstrap.
 - AI has been used on Canva to create the game show host and background.
-- Font awesome was used for the icons.
 - VScode was used as my IDE.
 - GitHub was used to store and publish the quiz.
 - Animation.css was used to create my animations.
@@ -171,7 +167,7 @@ These are the sources I used for my code.
 ### Media
 
 - For my images I used the AI on [Canva](https://www.canva.com/) to create them.
-- For my check box and social media links I used [font awesome](https://fontawesome.com/).
 - For my favicon image I used [Icon Archive](https://www.iconarchive.com/show/sleek-xp-basic-icons-by-hopstarter/Money-icon.html)
 - For my opening and winning video graphics I used [Videvo](https://www.videvo.net/video/abstract-streamers/4435/#rs=video-box)
 - For my audio clips I used [Pixabay](https://pixabay.com/sound-effects/search/quiz%20correct%20/)
+- To show my quiz on different screens I used [Am I responsive](https://ui.dev/amiresponsive/) to create them.
