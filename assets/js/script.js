@@ -5,6 +5,7 @@ textElement.style.setProperty('--animate-duration', '2s');
 let startScreen = document.querySelector('.start');
 let mainBodyElement = document.getElementById('main-body');
 let finishScreen = document.querySelector('.end')
+const startSound = new Audio('assets/audio/lets-go.mp3');
 
 textElement.classList.add('animate__animated', 'animate__zoomInDown', 'animate__slow');
 // load start screen
@@ -16,6 +17,7 @@ textElement.addEventListener('animationend', () => {
 function startQuiz() {
   startScreen.style.display = 'none';
   mainBodyElement.style.display = 'block';
+  startSound.play();
   getQuestion();
 }
 // questions
