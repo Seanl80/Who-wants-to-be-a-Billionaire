@@ -88,11 +88,13 @@ A winning ending animation.
 
 ## Testing
 
+I have used these validators to check the validity of my code.
+
 - [W3C CSS Validation](https://jigsaw.w3.org/css-validator/)
 
 - [W3C Markup Validation](https://validator.w3.org/)
 
-I have used W3C CSS and Markup Validators to check the validity of my code.
+- [JavaScript Validation](https://validatejavascript.com/)
 
 ## Testing Developer Goals
 
