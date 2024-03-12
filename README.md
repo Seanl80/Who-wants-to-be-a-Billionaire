@@ -15,7 +15,7 @@ Who wants to be a Billionaire is an interactive quiz for children to grown ups w
 
 - Everyone loves a good quiz they should be able to enjoy an easy to play game.
 - This quiz should be easy to navigate without being confusing.
-- I would like user to find the quiz to be engaging right from the outset.
+- I would like the users to find the quiz to be engaging right from the outset.
 - Users should feel they want to play again and again.
 
 ### User stories
@@ -23,8 +23,8 @@ Who wants to be a Billionaire is an interactive quiz for children to grown ups w
 As a user of this quiz, I want:
 
 - To be able to easily navigate through the quiz.
-- To see responses to know the user has answered a question.
-- To know if the user has won or lost.
+- To see responses to know if I have answered a question.
+- To know if I have won or lost.
 - To be entertained.
 - To have fun either by myself or with others. 
 
@@ -47,6 +47,12 @@ As a user of this quiz, I want:
 
 ### Wireframes
 
+Here are the original wireframes:
+
+![Home page wireframe](assets/wireframes/home-pageWF.jpg)
+![Quiz page wireframe](assets/wireframes/quiz-pageWF.jpg)
+![Lose page wireframe](assets/wireframes/lose-pageWF.jpg)
+![Win page wireframe](assets/wireframes/win-pageWF.jpg)
 
 ---
 
@@ -55,17 +61,17 @@ As a user of this quiz, I want:
 ### Existing features
 
 An animation once page has loaded.
-![An animation once page has loaded.](assets/images/startup-animationSS.png)
+![An animation once page has loaded.](assets/features/startup-animationSS.png)
 Video graphics behind the start screen button.
-![Video graphics behind the start screen button.](assets/images/start-screenSS.png)
+![Video graphics behind the start screen button.](assets/features/start-screenSS.png)
 Vibrant, uncluttered quiz layout with responsive interaction.
-![Vibrant, uncluttered quiz layout with responsive interaction.](assets/images/quiz-layoutSS.png)
+![Vibrant, uncluttered quiz layout with responsive interaction.](assets/features/quiz-layoutSS.png)
 A game over ending animation.
-![A game over ending animation.](assets/images/fail-endingSS.png)
+![A game over ending animation.](assets/features/fail-endingSS.png)
 A money counter for each winning question.
-![A money counter for each winning question.](assets/images/money-boxSS.png)
+![A money counter for each winning question.](assets/features/money-boxSS.png)
 A winning ending animation.
-![A winning ending animation.](assets/images/win-endingSS.png)
+![A winning ending animation.](assets/features/win-endingSS.png)
 
 ---
 
@@ -93,7 +99,7 @@ I have used W3C CSS and Markup Validators to check the validity of my code.
 ### Testing Developer Goals
 
 1. I would like to build an engaging quiz for all ages.
-- I have tested the quiz out on aselect group of people of young and old ages and they found it to be entertaining.
+- I have tested the quiz out on a select group of people of young and old ages and they found it to be entertaining.
 2. I would like users to talk about the quiz with friends/family to gain more users.
 - In testing the group of people also said they would recommend to their friends.
 3. I would like to build a colourful quiz to engage users.
@@ -108,7 +114,7 @@ As a user of this quiz, I want:
 1. To be able to easily navigate through the quiz.
 - After the animation on page load it just takes one click to access the quiz and from there the next question/page has an automatic change on an answer click after a short time. Even the win/lose pages have an easy to see button to restart the quiz.
 2. To see responses to know the user has answered a question.
-- All buttons have a colour change on hover and after a click an answer is revealed right or wrong by colour and sound.
+- All answer buttons have a colour change on hover and after a click an answer is revealed right or wrong by colour and sound.
 3. To know if the user has won or lost.
 - After each question answer a colour indicates straight away if you are right or wrong. Right answers take you to the next question or all the way to a winner page or an incorrect will take you to the game over page.
 4. To be entertained.
@@ -129,10 +135,10 @@ To deploy this page from its GitHub repository, the following steps were taken:
 1. Log into **GitHub**.
 2. From the list of repositories on the screen select **Seanl80/Who-wants-to-be-a-Billionare**.
 3. From the menu items near the top of the page, select **Settings**.
-4. Scroll down to **Pages** link on the left side of the screen.
+4. Click on the **Pages** link on the left side of the screen.
 5. Under **Source** click the drop down menu labelled **None** and select **Main Branch**.
 6. On selecting Main Branch, click save then refresh the page and the site is now deployed.
-7. Scroll back down to **GitHub Pages** section to retrieve the link to the deployed website.
+7. Click the **Pages** section to retrieve the link to the deployed website.
 
 ### How to run this project locally
 
@@ -167,7 +173,8 @@ These are the sources I used for my code.
 ### Media
 
 - For my images I used the AI on [Canva](https://www.canva.com/) to create them.
-- For my favicon image I used [Icon Archive](https://www.iconarchive.com/show/sleek-xp-basic-icons-by-hopstarter/Money-icon.html)
-- For my opening and winning video graphics I used [Videvo](https://www.videvo.net/video/abstract-streamers/4435/#rs=video-box)
-- For my audio clips I used [Pixabay](https://pixabay.com/sound-effects/search/quiz%20correct%20/)
+- For my favicon image I used [Icon Archive](https://www.iconarchive.com/show/sleek-xp-basic-icons-by-hopstarter/Money-icon.html).
+- For my opening and winning video graphics I used [Videvo](https://www.videvo.net/video/abstract-streamers/4435/#rs=video-box).
+- For my audio clips I used [Pixabay](https://pixabay.com/sound-effects/search/quiz%20correct%20/).
 - To show my quiz on different screens I used [Am I responsive](https://ui.dev/amiresponsive/) to create them.
+- For my wirefreames I used [Balsamiq](https://balsamiq.com/).
