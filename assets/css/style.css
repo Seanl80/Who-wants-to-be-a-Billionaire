@@ -111,14 +111,6 @@ h1, h2 {
     }
 }
 
-.align-right {
-    text-align: right;
-  }
-  
-.align-left {
-    text-align: left;
-  }
-
 #money-count {
     color: #ffd700;
     font-family: "Poppins", sans-serif;
