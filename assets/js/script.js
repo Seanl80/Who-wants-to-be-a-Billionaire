@@ -5,13 +5,27 @@ const startScreen = document.querySelector('.start');
 const mainBodyElement = document.getElementById('main-body');
 const finishScreen = document.querySelector('.end');
 const startSound = new Audio('assets/audio/lets-go.mp3');
+const correctSound = new Audio('assets/audio/right-answer.mp3');
+const wrongSound = new Audio('assets/audio/wrong-answer.mp3');
+const q = questions[runningQuestion];
+const answerElement = document.getElementById(answer);
+const question = document.getElementById('question');
+const choiceA = document.getElementById('A');
+const choiceB = document.getElementById('B');
+const choiceC = document.getElementById('C');
+const choiceD = document.getElementById('D');
+const lastQuestion = questions.length - 1;
+let runningQuestion = 0;
+
 // animate.style code
 textElement.classList.add('animate__animated', 'animate__zoomInDown', 'animate__slow');
+
 // load start screen
 textElement.addEventListener('animationend', () => {
   document.querySelector('.intro').style.display = 'none';
   startScreen.style.display = 'block';
 });
+
 // load quiz after button click
 function startQuiz() {
   startScreen.style.display = 'none';
@@ -103,30 +117,16 @@ const questions = [
   }
 ]
 
-const question = document.getElementById('question');
-const choiceA = document.getElementById('A');
-const choiceB = document.getElementById('B');
-const choiceC = document.getElementById('C');
-const choiceD = document.getElementById('D');
-const lastQuestion = questions.length - 1;
-let runningQuestion = 0;
-
 function getQuestion(){
-  const q = questions[runningQuestion];
-
   question.innerHTML = '<p>' + q.question + '</p';
   choiceA.innerHTML = q.choiceA;
   choiceB.innerHTML = q.choiceB;
   choiceC.innerHTML = q.choiceC;
   choiceD.innerHTML = q.choiceD;
 }
-// sounds
-const correctSound = new Audio('assets/audio/right-answer.mp3');
-const wrongSound = new Audio('assets/audio/wrong-answer.mp3');
 
 // check if answers right or wrong
 function checkAnswer(answer){
-  const answerElement = document.getElementById(answer);
   if( answer === questions[runningQuestion].correct){
     answerIsCorrect(answerElement);
   } else {
@@ -135,7 +135,6 @@ function checkAnswer(answer){
 }
 
 function answerIsCorrect(answerElement){
-  console.log('Answer is correct:', answerElement);
   answerElement.style.backgroundColor = 'green';
   correctSound.play();
   updateMoneyCount();
@@ -143,7 +142,6 @@ function answerIsCorrect(answerElement){
 }
 
 function answerIsWrong(answerElement){
-  console.log('Answer is wrong:', answerElement);
   answerElement.style.backgroundColor = 'red';
   wrongSound.play();
   setTimeout(function() {
@@ -163,12 +161,10 @@ function loadNextQuestion() {
   if (runningQuestion <= lastQuestion) {
     getQuestion();
   } else {
-    console.log('End of quiz');
     gameComplete();
   }
 }
 
-// money count
 let moneyCount = 0;
 
 function updateMoneyCount() {
@@ -180,13 +176,10 @@ function updateMoneyCount() {
   document.getElementById('money-count').textContent ='Money Won £' + moneyCount;
 }
 
-
-// game completed
 function gameComplete() {
   window.location.href = 'finish.html';
 }
 
-// restart game
 function reset() {
   window.location.href = 'index.html';
 }
