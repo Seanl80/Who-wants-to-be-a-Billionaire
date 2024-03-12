@@ -149,6 +149,7 @@ so I updated my code to an if else which worked this is it
   }
   document.getElementById("money-count").textContent = "Money Won £" + moneyCount;
 }`
+- after deploying the website I noticed my win page video was taking 30 seconds to load. This was different to when I was on my ide as that was an instant load. The video size was significantly larger than my other video graphics. Researching it I found the size could be a problem so I found an online compressor for free which reduced it. After checking this solved my problem.
 
 ## Deployment
 
@@ -202,3 +203,4 @@ These are the sources I used for my code.
 - For my audio clips I used [Pixabay](https://pixabay.com/sound-effects/search/quiz%20correct%20/).
 - To show my quiz on different screens I used [Am I responsive](https://ui.dev/amiresponsive/) to create them.
 - For my wirefreames I used [Balsamiq](https://balsamiq.com/).
+- To compress my largest video I used [FreeCompress](https://freecompress.com/reduce-video).
