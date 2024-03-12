@@ -49,10 +49,10 @@ As a user of this quiz, I want:
 
 Here are the original wireframes:
 
-![Home page wireframe](assets/wireframes/home-pageWF.jpg)
-![Quiz page wireframe](assets/wireframes/quiz-pageWF.jpg)
-![Lose page wireframe](assets/wireframes/lose-pageWF.jpg)
-![Win page wireframe](assets/wireframes/win-pageWF.jpg)
+![Home page wireframe](assets/wireframes/home-pageWF.png)
+![Quiz page wireframe](assets/wireframes/quiz-pageWF.png)
+![Lose page wireframe](assets/wireframes/lose-pageWF.png)
+![Win page wireframe](assets/wireframes/win-pageWF.png)
 
 ---
 
