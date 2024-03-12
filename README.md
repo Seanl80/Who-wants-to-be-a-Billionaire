@@ -125,6 +125,32 @@ As a user of this quiz, I want:
 
 ## Bugs
 
+Along the quiz making journey I did encounter a few bugs which I will detail below.
+
+- after creating my home page then adding in the animation I noticed the animation had pushed my home page below the animation. I had created the animation using a full screen viewport. This was overcome by adding a `display: none;` to my start screen home page and adding a event listener to when the animation ended.
+- I added the video graphic to my start screen which went fine but on my win page when the video graphic was added it was the only thing I could see when the page loaded. I overcame this by creating seperate html pages.
+- on my money counter it was jumping from 0, 1, 10, 20, 210, 2100 etc whereas I wanted it to increase in powers of 10. This was what I first used 
+`function updateMoneyCount() {
+    moneyCount++;
+    if (moneyCount > 1) {
+        moneyCount *= 10;
+    }
+    document.getElementById("money-count").textContent = "Money Won £" + moneyCount;
+}`
+![Incorrect moneycount.](assets/images/incorrect-money-count.png)
+
+so I updated my code to an if else which worked this is it
+`function updateMoneyCount() {
+  if (moneyCount === 0) {
+      moneyCount = 1;
+  } else {
+      moneyCount *= 10;
+  }
+  document.getElementById("money-count").textContent = "Money Won £" + moneyCount;
+}`
+- After adding in my green/red colours to my answer buttons I felt it moved too fast as at this point I was considering adding in a sound for correct/incorrect answers, for this I added a `setTimeout(loadNextQuestion, 1000);` to my functions to decide if the answer was right or wrong.
+-
+
 
 ## Deployment
 
