@@ -18,7 +18,7 @@ Who wants to be a Billionaire is an interactive quiz for children to grown ups w
 - I would like the users to find the quiz to be engaging right from the outset.
 - Users should feel they want to play again and again.
 
-### User stories
+## User stories
 
 As a user of this quiz, I want:
 
@@ -29,7 +29,7 @@ As a user of this quiz, I want:
 - To have fun either by myself or with others. 
 
 
-### Design choices
+## Design choices
 
 - The basic colour range for this quiz are with the following colours :-
 - ![#ffd700](https://placehold.co/15x15/ffd700/ffd700.png) `#ffd700`
@@ -40,12 +40,12 @@ As a user of this quiz, I want:
 - ![#ff0000](https://placehold.co/15x15/ff0000/ff0000.png) `#ff0000`
 
 - I chose these colours on the quiz theme.
-- black as its dark in the studio.
-- white, yellow and orange fall within the range for the lighting.
-- green and red are universally known for correct/incorrect answers.
+- Black as its dark in the studio.
+- White, yellow and orange fall within the range for the lighting.
+- Green and red are universally known for correct/incorrect answers.
 - I have added in graphics from video but these are similar or compliment my main theme colours.
 
-### Wireframes
+## Wireframes
 
 Here are the original wireframes:
 
@@ -56,9 +56,7 @@ Here are the original wireframes:
 
 ---
 
-## Features
-
-### Existing features
+## Existing features
 
 An animation once page has loaded.
 ![An animation once page has loaded.](assets/features/startup-animationSS.png)
@@ -96,7 +94,7 @@ A winning ending animation.
 
 I have used W3C CSS and Markup Validators to check the validity of my code.
 
-### Testing Developer Goals
+## Testing Developer Goals
 
 1. I would like to build an engaging quiz for all ages.
 - I have tested the quiz out on a select group of people of young and old ages and they found it to be entertaining.
@@ -107,7 +105,7 @@ I have used W3C CSS and Markup Validators to check the validity of my code.
 4. I will try to not make the questions so hard it will put people off of playing it.
 - I have adjusted some questions as the younger group found at least half quite difficult and need help.
 
-### Testing User Stories
+## Testing User Stories
 
 As a user of this quiz, I want:
 
@@ -127,9 +125,10 @@ As a user of this quiz, I want:
 
 Along the quiz making journey I did encounter a few bugs which I will detail below.
 
-- after creating my home page then adding in the animation I noticed the animation had pushed my home page below the animation. I had created the animation using a full screen viewport. This was overcome by adding a `display: none;` to my start screen home page and adding a event listener to when the animation ended.
+- After creating my home page then adding in the animation I noticed the animation had pushed my home page below the animation. I had created the animation using a full screen viewport. This was overcome by adding a `display: none;` to my start screen home page and adding a event listener to when the animation ended.
 - I added the video graphic to my start screen which went fine but on my win page when the video graphic was added it was the only thing I could see when the page loaded. I overcame this by creating seperate html pages.
-- on my money counter it was jumping from 0, 1, 10, 20, 210, 2100 etc whereas I wanted it to increase in powers of 10. This was what I first used 
+- After adding in my green/red colours to my answer buttons I felt it moved too fast as at this point I was considering adding in a sound for correct/incorrect answers, for this I added a `setTimeout(loadNextQuestion, 1000);` to my functions to decide if the answer was right or wrong.
+- On my money counter it was jumping from 0, 1, 10, 20, 210, 2100 etc whereas I wanted it to increase in powers of 10. This was what I first used 
 `function updateMoneyCount() {
     moneyCount++;
     if (moneyCount > 1) {
@@ -148,9 +147,6 @@ so I updated my code to an if else which worked this is it
   }
   document.getElementById("money-count").textContent = "Money Won £" + moneyCount;
 }`
-- After adding in my green/red colours to my answer buttons I felt it moved too fast as at this point I was considering adding in a sound for correct/incorrect answers, for this I added a `setTimeout(loadNextQuestion, 1000);` to my functions to decide if the answer was right or wrong.
--
-
 
 ## Deployment
 
