@@ -10,6 +10,7 @@ const laughSound = new Audio('assets/audio/laugh.mp3');
 const congratSound = new Audio('assets/audio/congratulations.mp3');
 const myAudio = [startSound, correctSound, wrongSound, laughSound, congratSound];
 const soundToggles = document.querySelectorAll('.sound-btn');
+let soundEnabled = false;
 
 // animate.style code
 textElement.style.setProperty('--animate-duration', '2s');
@@ -134,7 +135,7 @@ const questions = [
     choiceD: 'Humerus',
     correct: 'B'
   }
-]
+];
 
 const question = document.getElementById('question');
 const choiceA = document.getElementById('A');
