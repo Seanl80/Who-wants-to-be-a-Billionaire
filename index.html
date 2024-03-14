@@ -26,7 +26,8 @@
         </video>
         <div id="start-box">
             <h2>Answer all questions correctly to win the prize or you leave with nothing!</h2>
-            <button class="start-btn btn btn-dark btn-lg btn-block" onclick="startQuiz()">Ready?</button>
+            <button class="start-btn btn btn-dark btn-lg btn-block" onclick="startQuiz()">Ready?</button> 
+            <button class="sound-btn btn btn-dark btn-lg btn-block" onclick="toggleSound()">Sound Off</button>
         </div>
     </section>
     <!-- game section -->
@@ -50,9 +51,33 @@
                 </div>
                 <div id="money-count" class="money-count">
                     £0
-                </div>  
+                </div>
+                <div>
+                  <button class="sound-btn btn btn-dark btn-lg btn-block" onclick="toggleSound()">Sound Off</button>
+                </div> 
             </div>
     </section>
+    <!-- game-over section -->
+    <section class="gameover">
+      <video id="background-video" autoplay muted loop>
+          <source src="assets/images/game-over.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+      </video>
+      <div id="gameover-box">
+          <button class="start-btn btn btn-dark btn-lg btn-block" onclick="restartGame()">Try again?</button>
+      </div>
+  </section>
+  <!-- win section -->
+  <section class="end">
+    <video id="background-video" autoplay muted loop>
+        <source src="assets/images/freecompress-fireworks.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div id="end-box">
+        <h2>Congratulations!<br>Click to Collect your Winnings!</h2>
+        <button class="start-btn btn btn-dark btn-lg btn-block" onclick="restartGame()">Collect</button>
+    </div>
+</section>
     <footer></footer>
     <script src="assets/js/script.js"></script>
 </body>
