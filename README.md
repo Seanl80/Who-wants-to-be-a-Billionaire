@@ -94,7 +94,9 @@ I have used these validators to check the validity of my code.
 
 - [W3C Markup Validation](https://validator.w3.org/)
 
-- [JavaScript Validation](https://jshint.com/)
+- [JShint JavaScript Validation](https://jshint.com/)
+- I did have 3 unused variables as the screenshot show but these were due to being called through an onclick event in my index.html.
+- ![unused variables](assets/documents/unused-vars.png)
 
 ## Testing Developer Goals
 
