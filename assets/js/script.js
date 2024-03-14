@@ -1,31 +1,24 @@
-// intro
 const textElement = document.querySelector('.intro h1');
-textElement.style.setProperty('--animate-duration', '2s');
 const startScreen = document.querySelector('.start');
 const mainBodyElement = document.getElementById('main-body');
 const finishScreen = document.querySelector('.end');
+const failScreen = document.querySelector('.gameover');
 const startSound = new Audio('assets/audio/lets-go.mp3');
 const correctSound = new Audio('assets/audio/right-answer.mp3');
 const wrongSound = new Audio('assets/audio/wrong-answer.mp3');
-const q = questions[runningQuestion];
-const answerElement = document.getElementById(answer);
-const question = document.getElementById('question');
-const choiceA = document.getElementById('A');
-const choiceB = document.getElementById('B');
-const choiceC = document.getElementById('C');
-const choiceD = document.getElementById('D');
-const lastQuestion = questions.length - 1;
-let runningQuestion = 0;
+const laughSound = new Audio('assets/audio/laugh.mp3');
+const congratSound = new Audio('assets/audio/congratulations.mp3');
+const myAudio = [startSound, correctSound, wrongSound, laughSound, congratSound];
+const soundToggles = document.querySelectorAll('.sound-btn');
 
 // animate.style code
+textElement.style.setProperty('--animate-duration', '2s');
 textElement.classList.add('animate__animated', 'animate__zoomInDown', 'animate__slow');
-
 // load start screen
 textElement.addEventListener('animationend', () => {
   document.querySelector('.intro').style.display = 'none';
   startScreen.style.display = 'block';
 });
-
 // load quiz after button click
 function startQuiz() {
   startScreen.style.display = 'none';
@@ -33,6 +26,32 @@ function startQuiz() {
   startSound.play();
   getQuestion();
 }
+
+window.onload = function() {
+  soundEnabled = false;
+  toggleSound();
+};
+
+function toggleSound() {
+  soundEnabled = !soundEnabled;
+  if (soundEnabled) {
+    myAudio.forEach(audio => {
+      audio.muted = false;
+    });
+    soundToggles.forEach(button => {
+      button.textContent = 'Sound Is On';
+    });
+  } else {
+    myAudio.forEach(audio => {
+      audio.muted = true;
+    });
+    soundToggles.forEach(button => {
+      button.textContent = 'Sound Is Off';
+    });
+  }
+}
+
+
 // questions
 const questions = [
   {
@@ -117,7 +136,17 @@ const questions = [
   }
 ]
 
+const question = document.getElementById('question');
+const choiceA = document.getElementById('A');
+const choiceB = document.getElementById('B');
+const choiceC = document.getElementById('C');
+const choiceD = document.getElementById('D');
+const lastQuestion = questions.length - 1;
+let runningQuestion = 0;
+
 function getQuestion(){
+  const q = questions[runningQuestion];
+
   question.innerHTML = '<p>' + q.question + '</p';
   choiceA.innerHTML = q.choiceA;
   choiceB.innerHTML = q.choiceB;
@@ -127,6 +156,7 @@ function getQuestion(){
 
 // check if answers right or wrong
 function checkAnswer(answer){
+  const answerElement = document.getElementById(answer);
   if( answer === questions[runningQuestion].correct){
     answerIsCorrect(answerElement);
   } else {
@@ -145,8 +175,10 @@ function answerIsWrong(answerElement){
   answerElement.style.backgroundColor = 'red';
   wrongSound.play();
   setTimeout(function() {
-    window.location.href = 'gameover.html';
+    mainBodyElement.style.display = 'none';
+    failScreen.style.display = 'block';
   }, 1000);
+  laughSound.play();
 }
 
 function loadNextQuestion() {
@@ -161,7 +193,9 @@ function loadNextQuestion() {
   if (runningQuestion <= lastQuestion) {
     getQuestion();
   } else {
-    gameComplete();
+    mainBodyElement.style.display = 'none';
+    finishScreen.style.display = 'block';
+    congratSound.play();
   }
 }
 
@@ -176,11 +210,6 @@ function updateMoneyCount() {
   document.getElementById('money-count').textContent ='Money Won £' + moneyCount;
 }
 
-function gameComplete() {
-  window.location.href = 'finish.html';
-}
-
-function reset() {
+function restartGame() {
   window.location.href = 'index.html';
 }
-
