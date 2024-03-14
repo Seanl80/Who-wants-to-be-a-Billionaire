@@ -94,7 +94,7 @@ I have used these validators to check the validity of my code.
 
 - [W3C Markup Validation](https://validator.w3.org/)
 
-- [JavaScript Validation](https://validatejavascript.com/)
+- [JavaScript Validation](https://jshint.com/)
 
 ## Testing Developer Goals
 
@@ -129,6 +129,7 @@ Along the quiz making journey I did encounter a few bugs which I will detail bel
 
 - After creating my home page then adding in the animation I noticed the animation had pushed my home page below the animation. I had created the animation using a full screen viewport. This was overcome by adding a `display: none;` to my start screen home page and adding a event listener to when the animation ended.
 - I added the video graphic to my start screen which went fine but on my win page when the video graphic was added it was the only thing I could see when the page loaded. I overcame this by creating seperate html pages.
+- HOWEVER after I had added my sound effects to my buttons and win, lose page loads I could not control the sounds on different pages. So I had to recombine the win, lose pages with the index.html and use `display: none;` again. Then through my checkAnswer functions and loadQuestion functions I tried adding the page loads and sound effects. I found I could gain more control of them and was able to turn the sounds off or on together through one button click.
 - After adding in my green/red colours to my answer buttons I felt it moved too fast as at this point I was considering adding in a sound for correct/incorrect answers, for this I added a `setTimeout(loadNextQuestion, 1000);` to my functions to decide if the answer was right or wrong.
 - On my money counter it was jumping from 0, 1, 10, 20, 210, 2100 etc whereas I wanted it to increase in powers of 10. This was what I first used 
 `function updateMoneyCount() {
@@ -187,12 +188,9 @@ Then follow these steps:
 
 ### Code
 
-These are the sources I used for my code.
+Sources used for my code.
 
-- I took inspiration from the following YouTube videos
-[YouTube video from CodingHal](https://youtu.be/Vp8x8-reqZA?si=NlLqToooCAoQanbr).
-[YouTube video from GreatStack](https://youtu.be/PBcqGxrr9g8?si=OCYtLCcVIRlTcusv).
-- For the opening animation I used code from [Animate.CSS](https://animate.style/).
+- For the opening animation I used code from [Animate.CSS](https://animate.style/) which has been highlighted in my code.
 
 
 ### Media
