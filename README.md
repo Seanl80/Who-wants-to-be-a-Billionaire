@@ -58,18 +58,18 @@ Here are the original wireframes:
 
 ## Existing features
 
-An animation once page has loaded.
-![An animation once page has loaded.](assets/features/startup-animationSS.png)
-Video graphics behind the start screen button.
-![Video graphics behind the start screen button.](assets/features/start-screenSS.png)
-Vibrant, uncluttered quiz layout with responsive interaction.
-![Vibrant, uncluttered quiz layout with responsive interaction.](assets/features/quiz-layoutSS.png)
-A game over ending animation.
-![A game over ending animation.](assets/features/fail-endingSS.png)
-A money counter for each winning question.
-![A money counter for each winning question.](assets/features/money-boxSS.png)
-A winning ending animation.
-![A winning ending animation.](assets/features/win-endingSS.png)
+- An animation once page has loaded.
+![An animation once page has loaded.](assets/documents/startup-animationSS.png)
+- Video graphics behind the start screen button.
+![Video graphics behind the start screen button.](assets/documents/start-screenSS.png)
+- Vibrant, uncluttered quiz layout with responsive interaction.
+![Vibrant, uncluttered quiz layout with responsive interaction.](assets/documents/quiz-layoutSS.png)
+- A game over ending animation.
+![A game over ending animation.](assets/documents/fail-endingSS.png)
+- A money counter for each winning question.
+![A money counter for each winning question.](assets/documents/money-boxSS.png)
+- A winning ending animation.
+![A winning ending animation.](assets/documents/win-endingSS.png)
 
 ---
 
