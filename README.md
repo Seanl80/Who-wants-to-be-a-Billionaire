@@ -1,6 +1,6 @@
 # Who wants to be a Billionaire
 
-![Screenshots on defferent screen sizes](assets/images/screen-sizes.png)
+![Screenshots on defferent screen sizes](assets/documents/screen-sizes.png)
 
 Who wants to be a Billionaire is an interactive quiz for children to grown ups where ten correct answers can win you a billion pounds. Its colourful, engaging structure will allow enjoyment and leave you wanting to play more.
 
@@ -70,6 +70,8 @@ Here are the original wireframes:
 ![A money counter for each winning question.](assets/documents/money-boxSS.png)
 - A winning ending animation.
 ![A winning ending animation.](assets/documents/win-endingSS.png)
+- Control over the sound effects.
+![Control over the sound effects.](assets/documents/sound.png)
 
 ---
 
@@ -115,10 +117,13 @@ As a user of this quiz, I want:
 
 1. To be able to easily navigate through the quiz.
 - After the animation on page load it just takes one click to access the quiz and from there the next question/page has an automatic change on an answer click after a short time. Even the win/lose pages have an easy to see button to restart the quiz.
+-![One click to start quiz.](assets/documents/start-screenSS.png)
 2. To see responses to know the user has answered a question.
 - All answer buttons have a colour change on hover and after a click an answer is revealed right or wrong by colour and sound.
+-![Right or wrong colour change.](assets/documents/colour-changeSS.png)
 3. To know if the user has won or lost.
 - After each question answer a colour indicates straight away if you are right or wrong. Right answers take you to the next question or all the way to a winner page or an incorrect will take you to the game over page.
+![A game over ending animation.](assets/documents/fail-endingSS.png)
 4. To be entertained.
 - Every person who tried out this quiz found it to be engaging and wanted to play again until they had won.
 5. To have fun either by myself or with others.
@@ -152,7 +157,8 @@ so I updated my code to an if else which worked this is it
   }
   document.getElementById("money-count").textContent = "Money Won £" + moneyCount;
 }`
-- after deploying the website I noticed my win page video was taking 30 seconds to load. This was different to when I was on my ide as that was an instant load. The video size was significantly larger than my other video graphics. Researching it I found the size could be a problem so I found an online compressor for free which reduced it. After checking this solved my problem.
+- After deploying the website I noticed my win page video was taking 30 seconds to load. This was different to when I was on my ide as that was an instant load. The video size was significantly larger than my other video graphics. Researching it I found the size could be a problem so I found an online compressor for free which reduced it. After checking this solved my problem.
+- Once I had moved my questions into a seperate json file I found a bug. Once I had answered the first question correctly it immediately took me to the win screen at the end. To get around this I had to reorder my code as I think only the first question was loaded when the quiz had began.
 
 ## Deployment
 
