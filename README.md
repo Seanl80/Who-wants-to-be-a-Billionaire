@@ -71,7 +71,7 @@ Here are the original wireframes:
 - A winning ending animation.
 ![A winning ending animation.](assets/documents/win-endingSS.png)
 - Control over the sound effects.
-![Control over the sound effects.](assets/documents/sound.png)
+![Control over the sound effects.](assets/documents/soundSS.png)
 
 ---
 
