@@ -1,3 +1,29 @@
+let questions = [];
+let lastQuestion;
+let runningQuestion = 0;
+
+const questionElement = document.getElementById('question');
+const choiceA = document.getElementById('A');
+const choiceB = document.getElementById('B');
+const choiceC = document.getElementById('C');
+const choiceD = document.getElementById('D');
+
+fetch('questions.json')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(data => {
+    questions = data;
+    lastQuestion = questions.length - 1;
+    getQuestion();
+  })
+  .catch(error => {
+    console.error('There was a problem fetching the questions:', error);
+  });
+
 const textElement = document.querySelector('.intro h1');
 const startScreen = document.querySelector('.start');
 const mainBodyElement = document.getElementById('main-body');
@@ -52,99 +78,6 @@ function toggleSound() {
   }
 }
 
-
-// questions
-const questions = [
-  {
-    question: 'Who painted the Mona Lisa?',
-    choiceA: 'Leonardo da Vinci',
-    choiceB: 'Pablo Picasso',
-    choiceC: 'Vincent van Gogh',
-    choiceD: 'Michelangelo',
-    correct: 'A'
-  },
-  {
-    question:'What is the chemical symbol for water?',
-    choiceA: 'CO2',
-    choiceB: 'H2O',
-    choiceC: 'NaC1',
-    choiceD: 'O2',
-    correct: 'B'
-  },
-  {
-    question: 'What is the largest planet in our solar system?',
-    choiceA: 'Earth',
-    choiceB: 'Saturn',
-    choiceC: 'Mars',
-    choiceD: 'Jupiter',
-    correct: 'D'
-  },
-  {
-    question: 'In which year did the Titanic sink?',
-    choiceA: '1912',
-    choiceB: '1907',
-    choiceC: '1922',
-    choiceD: '1933',
-    correct: 'A'
-  },
-  {
-    question: 'What is the official language of Brazil?',
-    choiceA: 'Spanish',
-    choiceB: 'Portuguese',
-    choiceC: 'English',
-    choiceD: 'French',
-    correct: 'B'
-  },
-  {
-    question: 'Which country is the largest by land area?',
-    choiceA: 'Russia',
-    choiceB: 'China',
-    choiceC: 'United States',
-    choiceD: 'Canada',
-    correct: 'A'
-  },
-  {
-    question: "What is the main component of the Earth's atmosphere?",
-    choiceA: 'Oxygen',
-    choiceB: 'Argon',
-    choiceC: 'Nitrogen',
-    choiceD: 'Carbon dioxide',
-    correct: 'C'
-  },
-  {
-    question: 'Who was the first woman to win a Nobel Prize?',
-    choiceA: 'Mother Teresa',
-    choiceB: 'Marie Curie',
-    choiceC: 'Rosalind Franklin',
-    choiceD: 'Florence Nightingale',
-    correct: 'B'
-  },
-  {
-    question: 'In which year was the first iPhone released?',
-    choiceA: '2006',
-    choiceB: '2005',
-    choiceC: '2008',
-    choiceD: '2007',
-    correct: 'D'
-  },
-  {
-    question: 'What is the smallest bone in the human body?',
-    choiceA: 'Femer',
-    choiceB: 'Stapes',
-    choiceC: 'Tibia',
-    choiceD: 'Humerus',
-    correct: 'B'
-  }
-];
-
-const question = document.getElementById('question');
-const choiceA = document.getElementById('A');
-const choiceB = document.getElementById('B');
-const choiceC = document.getElementById('C');
-const choiceD = document.getElementById('D');
-const lastQuestion = questions.length - 1;
-let runningQuestion = 0;
-
 function getQuestion(){
   const q = questions[runningQuestion];
 
@@ -188,10 +121,9 @@ function loadNextQuestion() {
   document.getElementById('B').style.backgroundColor = '';
   document.getElementById('C').style.backgroundColor = '';
   document.getElementById('D').style.backgroundColor = '';
-  // move to next question
-  runningQuestion++; 
 
-  if (runningQuestion <= lastQuestion) {
+  if (runningQuestion < lastQuestion) {
+    runningQuestion++;
     getQuestion();
   } else {
     mainBodyElement.style.display = 'none';
