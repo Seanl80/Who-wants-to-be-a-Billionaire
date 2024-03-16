@@ -54,17 +54,6 @@ h1, h2 {
     width: 150px;
 }
 
-.sound-btn {
-    display: inline block;
-    background-color: #ffd700;
-    color: #000000;
-    border-radius: 50px;
-    font-size: 18px;
-    font-weight: bolder;
-    font-weight: 500;
-    width: 150px;
-}
-
 /* game page */
 #main-body {
     display: none;
