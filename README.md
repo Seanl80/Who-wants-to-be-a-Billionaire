@@ -97,11 +97,12 @@ I have used these validators to check the validity of my code.
 
 - [W3C Markup Validation](https://validator.w3.org/)
 - As my animation contained the words I wanted to show, I didn't feel I needed an extra heading.
-![RElevant warning found.](assets/documents/html-validation.png)
+![Relevant warning found.](assets/documents/html-validation.png)
+![Game over animation.](assets/documents/fail-endingSS.png)
 
 - [JShint JavaScript Validation](https://jshint.com/)
 - I did have 3 unused variables as the screenshot show but these were due to being called through an onclick event in my index.html.
-- ![unused variables](assets/documents/unused-varsSS.png)
+![unused variables](assets/documents/unused-varsSS.png)
 
 ## Testing Developer Goals
 
