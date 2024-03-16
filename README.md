@@ -1,6 +1,6 @@
 # Who wants to be a Billionaire
 
-![Screenshots on defferent screen sizes](assets/documents/screen-sizes.png)
+![Screenshots on different screen sizes](assets/documents/screen-sizes.png)
 
 Who wants to be a Billionaire is an interactive quiz for children to grown ups where ten correct answers can win you a billion pounds. Its colourful, engaging structure will allow enjoyment and leave you wanting to play more.
 
@@ -93,12 +93,15 @@ Here are the original wireframes:
 I have used these validators to check the validity of my code.
 
 - [W3C CSS Validation](https://jigsaw.w3.org/css-validator/)
+![No errors found.](assets/documents/css-validation.png)
 
 - [W3C Markup Validation](https://validator.w3.org/)
+- As my animation contained the words I wanted to show, I didn't feel I needed an extra heading.
+![RElevant warning found.](assets/documents/html-validation.png)
 
 - [JShint JavaScript Validation](https://jshint.com/)
 - I did have 3 unused variables as the screenshot show but these were due to being called through an onclick event in my index.html.
-- ![unused variables](assets/documents/unused-vars.png)
+- ![unused variables](assets/documents/unused-varsSS.png)
 
 ## Testing Developer Goals
 
