@@ -102,7 +102,7 @@ I have used these validators to check the validity of my code.
 
 - [JShint JavaScript Validation](https://jshint.com/)
 - I did have 3 unused variables as the screenshot show but these were due to being called through an onclick event in my index.html.
-![unused variables](assets/documents/unused-varsSS.png)
+![unused variables](assets/documents/js-validation.png)
 
 ## Testing Developer Goals
 
