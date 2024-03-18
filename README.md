@@ -49,29 +49,29 @@ As a user of this quiz, I want:
 
 Here are the original wireframes:
 
-![Home page wireframe](assets/wireframes/home-pageWF.png)
-![Quiz page wireframe](assets/wireframes/quiz-pageWF.png)
-![Lose page wireframe](assets/wireframes/lose-pageWF.png)
-![Win page wireframe](assets/wireframes/win-pageWF.png)
+![Home page wireframe](assets/wireframes/home-page.png)
+![Quiz page wireframe](assets/wireframes/quiz-page.png)
+![Lose page wireframe](assets/wireframes/lose-page.png)
+![Win page wireframe](assets/wireframes/win-page.png)
 
 ---
 
 ## Existing features
 
 - An animation once page has loaded.
-![An animation once page has loaded.](assets/documents/startup-animationSS.png)
+![An animation once page has loaded.](assets/documents/startup-animation.png)
 - Video graphics behind the start screen button.
-![Video graphics behind the start screen button.](assets/documents/start-screenSS.png)
+![Video graphics behind the start screen button.](assets/documents/start-screen.png)
 - Vibrant, uncluttered quiz layout with responsive interaction.
-![Vibrant, uncluttered quiz layout with responsive interaction.](assets/documents/quiz-layoutSS.png)
+![Vibrant, uncluttered quiz layout with responsive interaction.](assets/documents/quiz-layout.png)
 - A game over ending animation.
-![A game over ending animation.](assets/documents/fail-endingSS.png)
+![A game over ending animation.](assets/documents/fail-ending.png)
 - A money counter for each winning question.
-![A money counter for each winning question.](assets/documents/money-boxSS.png)
+![A money counter for each winning question.](assets/documents/money-box.png)
 - A winning ending animation.
-![A winning ending animation.](assets/documents/win-endingSS.png)
+![A winning ending animation.](assets/documents/win-ending.png)
 - Control over the sound effects.
-![Control over the sound effects.](assets/documents/soundSS.png)
+![Control over the sound effects.](assets/documents/sound.png)
 
 ---
 
@@ -121,13 +121,13 @@ As a user of this quiz, I want:
 
 1. To be able to easily navigate through the quiz.
 - After the animation on page load it just takes one click to access the quiz and from there the next question/page has an automatic change on an answer click after a short time. Even the win/lose pages have an easy to see button to restart the quiz.
--![One click to start quiz.](assets/documents/start-screenSS.png)
+-![One click to start quiz.](assets/documents/start-screen.png)
 2. To see responses to know the user has answered a question.
 - All answer buttons have a colour change on hover and after a click an answer is revealed right or wrong by colour and sound.
--![Right or wrong colour change.](assets/documents/colour-changeSS.png)
+-![Right or wrong colour change.](assets/documents/colour-change.png)
 3. To know if the user has won or lost.
 - After each question answer a colour indicates straight away if you are right or wrong. Right answers take you to the next question or all the way to a winner page or an incorrect will take you to the game over page.
-![A game over ending animation.](assets/documents/fail-endingSS.png)
+![A game over ending animation.](assets/documents/fail-ending.png)
 4. To be entertained.
 - Every person who tried out this quiz found it to be engaging and wanted to play again until they had won.
 5. To have fun either by myself or with others.
