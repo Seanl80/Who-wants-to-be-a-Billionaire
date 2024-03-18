@@ -2,13 +2,13 @@ let questions = [];
 let lastQuestion;
 let runningQuestion = 0;
 
-const questionElement = document.getElementById('question');
+const question = document.getElementById('question');
 const choiceA = document.getElementById('A');
 const choiceB = document.getElementById('B');
 const choiceC = document.getElementById('C');
 const choiceD = document.getElementById('D');
 
-fetch('questions.json')
+fetch('assets/js/questions.json')
   .then(response => {
     if (!response.ok) {
       throw new Error('Network response was not ok');
