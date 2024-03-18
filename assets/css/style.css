@@ -73,7 +73,9 @@ h1, h2 {
     transform: translate(-50%, -50%);
     width: 80%;
     min-height: 90vh;
-    background: url('../images/game-design.jpg')no-repeat center center;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url('../images/game-design.jpg')no-repeat center center;
     border-radius: 50px;
 }
 
